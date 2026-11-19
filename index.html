@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1A043C">
+    <title>After The Last Round</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-effects" aria-hidden="true">
+        <div class="stars stars-back"></div>
+        <div class="stars stars-front"></div>
+    </div>
+
+    <header class="header">
+        <div class="header-logo">
+            <span class="logo-symbol">✦</span>
+            <span>AFTER THE LAST ROUND</span>
+        </div>
+        <p class="header-subtitle">EVERY ENDING LEAVES A MEMORY</p>
+    </header>
+
+    <main class="main-container">
+        <!-- MAIN MENU -->
+        <section class="screen main-menu active" id="mainMenu">
+            <div class="menu-left">
+                <div class="title-content">
+                    <p class="small-heading">
+                        <span class="heading-line"></span>
+                        A STORY WAITING TO BE TOLD
+                        <span class="heading-line"></span>
+                    </p>
+
+                    <h1 class="game-title">
+                        AFTER THE
+                        <span>LAST ROUND</span>
+                    </h1>
+
+                    <p class="title-description">
+                        Some stories deserve another chance.
+                    </p>
+
+                    <div class="pixel-divider">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+
+                <nav class="menu-buttons" aria-label="Main menu">
+                    <button class="menu-button primary" data-screen="gameScreen">
+                        <span class="button-arrow">▶</span>
+                        <span>PLAY GAME</span>
+                    </button>
+                    <button class="menu-button" data-screen="howToScreen">
+                        <span class="button-arrow">▶</span>
+                        <span>HOW TO PLAY</span>
+                    </button>
+                    <button class="menu-button" data-screen="settingsScreen">
+                        <span class="button-arrow">▶</span>
+                        <span>SETTINGS</span>
+                    </button>
+                    <button class="menu-button" data-screen="creditsScreen">
+                        <span class="button-arrow">▶</span>
+                        <span>CREDITS</span>
+                    </button>
+                </nav>
+
+                <p class="menu-version">BUILD 01.0.0 <span>◆</span> PIXEL EDITION</p>
+            </div>
+
+            <div class="pixel-character-area">
+                <div class="moon"></div>
+
+                <div class="character-stars" aria-hidden="true">
+                    <span>✦</span>
+                    <span>·</span>
+                    <span>✧</span>
+                    <span>·</span>
+                    <span>✦</span>
+                </div>
+
+                <div class="character-glow"></div>
+
+                <img class="main-character"
+                     src="assets/idle.gif"
+                     alt="Main character">
+
+                <div class="character-platform" aria-hidden="true">
+                    <div class="platform-top"></div>
+                    <div class="platform-side"></div>
+                    <div class="platform-front-detail"></div>
+                </div>
+
+                <p class="character-caption">
+                    <span class="caption-dot"></span>
+                    THE JOURNEY CONTINUES
+                </p>
+            </div>
+        </section>
+
+        <!-- GAME PREVIEW -->
+        <section class="screen content-screen game-screen" id="gameScreen">
+            <div class="screen-top">
+                <p class="small-heading">YOUR ADVENTURE STARTS HERE</p>
+                <h2>Game Preview</h2>
+                <p class="screen-description">The journey is waiting to begin...</p>
+            </div>
+
+            <div class="game-frame">
+                <div class="game-frame-header">
+                    <span>◆ AFTER THE LAST ROUND</span>
+                    <span>PREVIEW BUILD</span>
+                </div>
+                <canvas id="gameCanvas" width="800" height="400">
+                    Your browser does not support canvas.
+                </canvas>
+                <div class="game-frame-footer">
+                    <span>LOCATION: UNKNOWN</span>
+                    <span>STATUS: IN DEVELOPMENT</span>
+                </div>
+            </div>
+
+            <button class="back-button" data-screen="mainMenu">
+                <span>◀</span> BACK TO MENU
+            </button>
+        </section>
+
+        <!-- HOW TO PLAY -->
+        <section class="screen content-screen information-screen" id="howToScreen">
+            <div class="screen-top">
+                <p class="small-heading">YOUR JOURNEY BEGINS HERE</p>
+                <h2>How to Play</h2>
+                <p class="screen-description">Every choice is part of your story.</p>
+            </div>
+
+            <div class="information-content">
+                <article class="info-item">
+                    <span class="info-number">01</span>
+                    <div class="info-icon">✦</div>
+                    <h3>Explore</h3>
+                    <p>Discover places, memories, and hidden parts of the story.</p>
+                </article>
+                <article class="info-item">
+                    <span class="info-number">02</span>
+                    <div class="info-icon">◇</div>
+                    <h3>Remember</h3>
+                    <p>Pay attention to the people and moments you encounter.</p>
+                </article>
+                <article class="info-item">
+                    <span class="info-number">03</span>
+                    <div class="info-icon">✧</div>
+                    <h3>Discover</h3>
+                    <p>Uncover the meaning behind every round and every ending.</p>
+                </article>
+            </div>
+
+            <button class="back-button" data-screen="mainMenu">
+                <span>◀</span> BACK TO MENU
+            </button>
+        </section>
+
+        <!-- SETTINGS -->
+        <section class="screen content-screen settings-screen" id="settingsScreen">
+            <div class="screen-top">
+                <p class="small-heading">CUSTOMIZE YOUR EXPERIENCE</p>
+                <h2>Game Settings</h2>
+                <p class="screen-description">Adjust your experience.</p>
+            </div>
+
+            <div class="settings-panel">
+                <div class="setting-option">
+                    <div class="setting-heading">
+                        <label for="masterVolume">Master Volume</label>
+                        <span id="masterValue">100%</span>
+                    </div>
+                    <input type="range" id="masterVolume" min="0" max="100" value="100">
+                </div>
+
+                <div class="setting-option">
+                    <div class="setting-heading">
+                        <label for="musicVolume">Music Volume</label>
+                        <span id="musicValue">70%</span>
+                    </div>
+                    <input type="range" id="musicVolume" min="0" max="100" value="70">
+                </div>
+
+                <div class="setting-option">
+                    <div class="setting-heading">
+                        <label for="sfxVolume">Sound Effects</label>
+                        <span id="sfxValue">80%</span>
+                    </div>
+                    <input type="range" id="sfxVolume" min="0" max="100" value="80">
+                </div>
+
+                <div class="setting-option toggle-option">
+                    <label for="muteAudio">Mute All Audio</label>
+                    <input type="checkbox" id="muteAudio">
+                </div>
+
+                <div class="setting-option">
+                    <div class="setting-heading">
+                        <label for="brightness">Background Brightness</label>
+                        <span id="brightnessValue">100%</span>
+                    </div>
+                    <input type="range" id="brightness" min="50" max="150" value="100">
+                </div>
+            </div>
+
+            <p class="settings-note">
+                Audio preferences are saved. Actual audio playback controls will be connected when sound is added.
+            </p>
+
+            <div class="settings-buttons">
+                <button id="resetSettings" class="secondary-button">RESET SETTINGS</button>
+                <button class="back-button" data-screen="mainMenu">
+                    <span>◀</span> BACK TO MENU
+                </button>
+            </div>
+        </section>
+
+        <!-- CREDITS -->
+        <section class="screen content-screen information-screen" id="creditsScreen">
+            <div class="screen-top">
+                <p class="small-heading">THE PEOPLE BEHIND THE STORY</p>
+                <h2>Credits</h2>
+                <p class="screen-description">Every story starts with an idea.</p>
+            </div>
+
+            <div class="credits-content">
+                <div class="credits-symbol">✦</div>
+                <h3>After The Last Round</h3>
+                <p class="credit-role">CREATED BY</p>
+                <p class="credit-name">Paul</p>
+                <div class="credit-divider"></div>
+                <p>Design and Development</p>
+                <p>Pixel Art and Game Concept</p>
+                <div class="credit-divider"></div>
+                <p class="credits-thanks">Special thanks to everyone who inspired this project.</p>
+            </div>
+
+            <button class="back-button" data-screen="mainMenu">
+                <span>◀</span> BACK TO MENU
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 AFTER THE LAST ROUND</p>
+        <span>MADE WITH PIXELS AND MEMORIES</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
